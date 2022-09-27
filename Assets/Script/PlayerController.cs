@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    float speed;
+    public float speed;
 
     void Start()
     {
@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        
+        Movement();
     }
 
     void Movement()
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
         if (speed != 0)
         {
-            transform.Translate(inputx * Time.deltaTime * speed);
+            transform.Translate(transform.right * inputx * speed * Time.deltaTime, 0);
         }
     }
 }

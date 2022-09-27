@@ -4,11 +4,6 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
 
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         Movement();

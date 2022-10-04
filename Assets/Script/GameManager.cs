@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int score;
     GameObject playerDestroy;
     GameObject player;
-    [SerializeField] Vector3 spawnPosition;
+    [SerializeField] Transform spawnPosition;
 
     void Start()
     {
@@ -42,7 +42,10 @@ public class GameManager : MonoBehaviour
 
     void LoseLife()
     {
-        if (life > 0) { StartCoroutine(PlayerLossLife(timeRespawn))}
+        if (life > 0) 
+        {
+            StartCoroutine(PlayerLossLife(timeRespawn));
+        }
         else GameManager.gameOverEvent?.Invoke();
     }
 
@@ -53,7 +56,7 @@ public class GameManager : MonoBehaviour
 
     void InstantiatePlayer()
     {
-        playerDestroy = Instantiate(player, spawnPosition, Quaternion.identity);
+        playerDestroy = Instantiate(player, spawnPosition.position, Quaternion.identity);
     }
 
     IEnumerator PlayerLossLife(float time)

@@ -57,4 +57,15 @@ public class PlayerController : MonoBehaviour
             proyectile.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, proyectileSpeed));
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            Debug.Log("Dario");
+            if (!isDeath) GameManager.loseLifeEvent?.Invoke();
+            collision.gameObject.SetActive(false);
+        }
+        if (collision.gameObject.GetComponent<Enemy>() != null) GameManager.gameOverEvent?.Invoke();
+    }
 }

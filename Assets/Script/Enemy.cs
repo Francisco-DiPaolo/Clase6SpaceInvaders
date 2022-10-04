@@ -1,15 +1,18 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 
-public class Enemy : MonoBehaviour
+public class Enemy : Shooting
 {
+    public List<GameObject> enemies;
     public GameObject[] invader;
-    public GameObject enemyChild;
 
     public int rows = 5;
     public int columns = 11;
+    public int invaderCount;
 
     public float speedEnemy;
+    public float timeShot;
 
     public static Action dieEnemyEvent;
 
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
             for (int col = 0; col < columns; col++)
             {
                 GameObject invaders = Instantiate(invader[row], transform);
+                enemies.Add(invaders);
                 Vector3 position = rowPosition;
                 position.x += col * 2;
                 invaders.transform.localPosition = position;
@@ -34,7 +38,18 @@ public class Enemy : MonoBehaviour
         } 
     }
 
+    public override void Start()
+    {
+        base.Start();
+        InvokeRepeating("RandomShoot", timeShot, timeShot);
+    }
+
     private void Update()
+    {
+        MoveEnemy();
+    }
+
+    private void MoveEnemy()
     {
         transform.position += direction * speedEnemy * Time.deltaTime;
 
@@ -48,7 +63,8 @@ public class Enemy : MonoBehaviour
             if (direction == Vector3.right && invaders.position.x >= (rightEdge.x - 1))
             {
                 AdvanceRow();
-            } else if (direction == Vector3.left && invaders.position.x <= (leftEdge.x + 1))
+            }
+            else if (direction == Vector3.left && invaders.position.x <= (leftEdge.x + 1))
             {
                 AdvanceRow();
             }
@@ -62,5 +78,11 @@ public class Enemy : MonoBehaviour
         Vector3 position = transform.position;
         position.y -= 1;
         transform.position = position;
+    }
+
+    void RandomShoot()
+    {
+        int randomSpawn = UnityEngine.Random.Range(0, enemies.Count);
+        Shoot(enemies[randomSpawn].transform.GetChild(0).transform);
     }
 }

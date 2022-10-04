@@ -678,16 +678,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3e644ba1f250ce49865a903881d913d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  proyectileSpeed: 1000
+  cooldownShot: 1
+  enemies: []
   invader:
   - {fileID: 1052823649377294056, guid: 9814f431ac94d7042baad2827705e951, type: 3}
   - {fileID: 3949068943330871538, guid: 247889837b40e8d428d1c26e7cdc418c, type: 3}
   - {fileID: 3949068943330871538, guid: 247889837b40e8d428d1c26e7cdc418c, type: 3}
   - {fileID: 2918164838904975917, guid: 755d4eee4344b194e94f67352cf3700d, type: 3}
   - {fileID: 2918164838904975917, guid: 755d4eee4344b194e94f67352cf3700d, type: 3}
-  enemyChild: {fileID: 0}
   rows: 5
   columns: 11
+  invaderCount: 0
   speedEnemy: 1
+  timeShot: 1
 --- !u!4 &1216439639
 Transform:
   m_ObjectHideFlags: 0

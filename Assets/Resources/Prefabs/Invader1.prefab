@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4712794334259405121}
   - component: {fileID: 1864148119614985007}
   - component: {fileID: 2765056509907777338}
-  - component: {fileID: 8314791528674076442}
+  - component: {fileID: 7196759888298274182}
   m_Layer: 8
   m_Name: Invader1
   m_TagString: Untagged
@@ -31,7 +31,8 @@ Transform:
   m_LocalPosition: {x: -2.15, y: 1.27, z: 0}
   m_LocalScale: {x: 1, y: 1.2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8801266440289064146}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,7 +135,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8314791528674076442
+--- !u!114 &7196759888298274182
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,3 +147,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b92c5a75fba461a4c8f8729ef3c7b460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &4752967222307637039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8801266440289064146}
+  m_Layer: 8
+  m_Name: transformShot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8801266440289064146
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4752967222307637039}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7023132796922145950}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}

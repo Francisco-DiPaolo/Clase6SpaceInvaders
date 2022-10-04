@@ -4,10 +4,12 @@ using System;
 public class Enemy : MonoBehaviour
 {
     public GameObject[] invader;
+    public GameObject enemyChild;
+
     public int rows = 5;
     public int columns = 11;
 
-    public float speed;
+    public float speedEnemy;
 
     public static Action dieEnemyEvent;
 
@@ -34,7 +36,7 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        transform.position += direction * speed * Time.deltaTime;
+        transform.position += direction * speedEnemy * Time.deltaTime;
 
         Vector3 leftEdge = Camera.main.ViewportToWorldPoint(Vector3.zero);
         Vector3 rightEdge = Camera.main.ViewportToWorldPoint(Vector3.right);
@@ -60,15 +62,5 @@ public class Enemy : MonoBehaviour
         Vector3 position = transform.position;
         position.y -= 1;
         transform.position = position;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser"))
-        {
-            Debug.Log("Pepe");
-            this.gameObject.SetActive(false);
-            collision.gameObject.SetActive(false);
-        }
     }
 }

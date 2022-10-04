@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
-    void Shooting()
+    public void Shooting()
     {
         if(Time.time - lastShot < cooldownShot)
         {

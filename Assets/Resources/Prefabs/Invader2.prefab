@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1913262137417783933}
   - component: {fileID: 1337130443410977453}
   - component: {fileID: -666903301564626725}
-  - component: {fileID: -9156934289367482250}
+  - component: {fileID: 7984453281240566721}
   m_Layer: 8
   m_Name: Invader2
   m_TagString: Untagged
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-9156934289367482250
+--- !u!114 &7984453281240566721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,6 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3949068943330871538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f57e2d3fd6827e4f9d21e26eb1e7323, type: 3}
+  m_Script: {fileID: 11500000, guid: b92c5a75fba461a4c8f8729ef3c7b460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

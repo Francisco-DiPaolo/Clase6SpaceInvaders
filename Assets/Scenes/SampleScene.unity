@@ -684,9 +684,10 @@ MonoBehaviour:
   - {fileID: 3949068943330871538, guid: 247889837b40e8d428d1c26e7cdc418c, type: 3}
   - {fileID: 2918164838904975917, guid: 755d4eee4344b194e94f67352cf3700d, type: 3}
   - {fileID: 2918164838904975917, guid: 755d4eee4344b194e94f67352cf3700d, type: 3}
+  enemyChild: {fileID: 0}
   rows: 5
   columns: 11
-  speed: 1
+  speedEnemy: 1
 --- !u!4 &1216439639
 Transform:
   m_ObjectHideFlags: 0

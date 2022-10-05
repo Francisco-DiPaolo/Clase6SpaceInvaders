@@ -9,7 +9,6 @@ public class Enemy : Shooting
 
     public int rows = 5;
     public int columns = 11;
-    public int invaderCount;
 
     public float speedEnemy;
     public float timeShot;

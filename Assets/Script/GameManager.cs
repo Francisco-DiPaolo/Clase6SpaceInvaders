@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
     void GameOver()
     {
         gameOverText.SetActive(true);
+        Time.timeScale = 0;
     }
 
     void InstantiatePlayer()

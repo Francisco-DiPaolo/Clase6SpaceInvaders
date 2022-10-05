@@ -20,7 +20,11 @@ public class PlayerController : Shooting
         if (!isDeath)
         {
             Movement();
-            if (Input.GetKeyDown(KeyCode.Space)) Shoot(transformShot);   
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                AudioManager.instanceSound("shoot");
+                Shoot(transformShot);
+            }
         }
     }
 
@@ -36,11 +40,12 @@ public class PlayerController : Shooting
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Laser") && collision.transform.rotation.z != 0)
         {
             if (!isDeath) GameManager.loseLifeEvent?.Invoke();
             collision.gameObject.SetActive(false);
         }
+
         if (collision.gameObject.GetComponent<Enemy>() != null) GameManager.gameOverEvent?.Invoke();
     }
 }

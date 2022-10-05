@@ -44,7 +44,13 @@ public class PlayerController : Shooting
             if (!isDeath) GameManager.loseLifeEvent?.Invoke();
             collision.gameObject.SetActive(false);
         }
+    }
 
-        if (collision.gameObject.GetComponent<Enemy>() != null) GameManager.gameOverEvent?.Invoke();
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+            GameManager.gameOverEvent?.Invoke();
+        }
     }
 }

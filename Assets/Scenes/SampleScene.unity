@@ -763,7 +763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1216439639}
   - component: {fileID: 1216439638}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Invaders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,6 +793,7 @@ MonoBehaviour:
   - {fileID: 2918164838904975917, guid: 755d4eee4344b194e94f67352cf3700d, type: 3}
   rows: 5
   columns: 11
+  enemiestotal: 0
   speedEnemy: 1
   timeShot: 0.5
 --- !u!4 &1216439639
@@ -962,7 +963,6 @@ MonoBehaviour:
   gameOverText: {fileID: 1005045775}
   timeRespawn: 2
   life: 3
-  scoreTotal: 0
   scoreToAdd: 100
   spawnPosition: {fileID: 287376831}
 --- !u!1 &1515933463

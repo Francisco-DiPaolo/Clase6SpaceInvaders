@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public class PlayerController : Shooting
 {
@@ -20,9 +19,9 @@ public class PlayerController : Shooting
         if (!isDeath)
         {
             Movement();
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                AudioManager.instanceSound("shoot");
                 Shoot(transformShot);
             }
         }

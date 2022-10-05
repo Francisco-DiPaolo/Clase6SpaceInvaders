@@ -10,6 +10,7 @@ public class Enemy : Shooting
     public int rows = 5;
     public int columns = 11;
 
+    public float enemiestotal;
     public float speedEnemy;
     public float timeShot;
 
@@ -41,6 +42,8 @@ public class Enemy : Shooting
     {
         base.Start();
         InvokeRepeating("RandomShoot", timeShot, timeShot);
+
+        enemiestotal = enemies.Count;
     }
 
     private void Update()

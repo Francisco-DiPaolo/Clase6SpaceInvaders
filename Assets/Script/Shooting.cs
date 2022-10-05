@@ -22,6 +22,7 @@ public class Shooting : MonoBehaviour
         lastShot = Time.time;
 
         GameObject proyectile = poolProyectile.GetPooledObject();
+        AudioManager.instanceSound("shoot");
 
         if (proyectile != null)
         {

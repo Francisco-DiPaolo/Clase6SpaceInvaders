@@ -168,7 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pooledObjects: []
-  amountToPool: 8
+  amountToPool: 4
 --- !u!1 &203363753
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1005045776
 RectTransform:
   m_ObjectHideFlags: 0
@@ -962,7 +962,8 @@ MonoBehaviour:
   gameOverText: {fileID: 1005045775}
   timeRespawn: 2
   life: 3
-  score: 0
+  scoreTotal: 0
+  scoreToAdd: 100
   spawnPosition: {fileID: 287376831}
 --- !u!1 &1515933463
 GameObject:
@@ -1078,7 +1079,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3b03c23616f0edf49a4cad23db143c29, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1174,7 +1175,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c474afd797dbfc64a80edbf40afe1642, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0

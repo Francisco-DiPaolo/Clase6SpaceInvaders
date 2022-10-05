@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     public float timeRespawn;
 
     [SerializeField] int life;
-    [SerializeField] int score;
+    [SerializeField] int scoreToAdd;
+    int scoreTotal;
+
     GameObject playerDestroy;
     GameObject player;
     [SerializeField] Transform spawnPosition;
@@ -30,13 +32,13 @@ public class GameManager : MonoBehaviour
 
     void UpdateUi()
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + scoreTotal;
         lifeText.text = "Life: " + life;
     }
 
     void AddScore()
     {
-        score++;
+        scoreTotal += scoreToAdd;
         UpdateUi();
     }
 
